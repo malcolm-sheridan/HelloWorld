@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>   
     <p>This is some temporary text</p> 
+    <p>Another useless comment</p> 
   </div>
 </template>
 
