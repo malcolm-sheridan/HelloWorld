@@ -24,7 +24,8 @@ steps:
   inputs:    
     Contents: 'dist/**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    
+    CleanTargetFolder: true
+        
 - task: PublishBuildArtifacts@1
   inputs: 
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' # dist or build files
