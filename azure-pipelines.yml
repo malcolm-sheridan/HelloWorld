@@ -24,7 +24,7 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/dist'
     Contents: '**'
-    TargetFolder: '${Build.ArtifactStagingDirectory}'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
 
 - task: ArchiveFiles@2
