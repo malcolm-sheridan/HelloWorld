@@ -27,6 +27,14 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
 
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '$(Build.SourcesDirectory)/dist'
+    azureSubscription: 'Free Trial (36336351-367e-43b2-ac0d-f9c329c67cd8)'
+    Destination: 'AzureBlob'
+    storage: 'sahelloworld2'
+    ContainerName: '$web'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/dist'
